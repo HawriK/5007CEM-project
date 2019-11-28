@@ -1,0 +1,26 @@
+{
+  "name": "5007cem-project",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HawriK/5007CEM-project.git"
+  },
+  "keywords": [
+    "Hello",
+    "World"
+  ],
+  "author": "Hawri Kazaz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HawriK/5007CEM-project/issues"
+  },
+  "homepage": "https://github.com/HawriK/5007CEM-project#readme",
+  "dependencies": {
+    "koa": "^2.11.0"
+  }
+}
