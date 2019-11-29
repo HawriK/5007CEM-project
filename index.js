@@ -1,17 +1,16 @@
-//import express module
 var express = require('express');
-//create an express app
 var app = express();
 
-//add a callback function to handle 
-//get request on the root
-app.get('/', function(req, res) {
+const path = require('path');
+app.use(express.static('public'));
 
-    //save the html code in a variable
-    var homePage = "<h1 style='color:red'>Welcome to cubic Games</h1>";
-    //send the html code to the client
-    res.send(homePage);
-
+app.get('/', function(req, res) {  
+    res.sendFile(path.join(__dirname+'/html/index.html'));
 });
-//run the server on port 3000
-app.listen(3000);
+
+app.get('/about', function(req, res) {  
+    res.sendFile(path.join(__dirname+'/html/about.html'));
+});
+
+var port = process.env.PORT || 3000;
+app.listen(port);
