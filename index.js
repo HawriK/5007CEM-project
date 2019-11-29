@@ -8,8 +8,8 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname+'/html/index.html'));
 });
 
-app.get('/about', function(req, res) {  
-    res.sendFile(path.join(__dirname+'/html/about.html'));
+app.get('/Contact us', function(req, res) {  
+    res.sendFile(path.join(__dirname+'A:\hawri\Uni work\5007CEM NEW\5007CEM-project\html\about.html'));
 });
 
 var port = process.env.PORT || 3000;
