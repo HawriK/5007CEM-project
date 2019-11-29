@@ -9,7 +9,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/Contact us', function(req, res) {  
-    res.sendFile(path.join(__dirname+'A:\hawri\Uni work\5007CEM NEW\5007CEM-project\html\about.html'));
+    res.sendFile(path.join(__dirname+'/html/about.html'));
 });
 
 var port = process.env.PORT || 3000;
