@@ -8,7 +8,7 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname+'/html/index.html'));
 });
 
-app.get('/Contact us', function(req, res) {  
+app.get('/about', function(req, res) {  
     res.sendFile(path.join(__dirname+'/html/about.html'));
 });
 
