@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="A:\hawri\Uni work\5007CEM NEW\5007CEM-project\public\css\contact.css">
+    <link rel="stylesheet" type="text/css" href="./css/contact.css">
 
 </head>
 <body>
@@ -40,78 +40,110 @@
 
         <br>
         <br>
-        <section class="Material-contact-section section-padding section-dark">
-                <div class="container">
-                    <div class="row">
-                        <!-- Section Titile -->
-                        <div class="col-md-12 wow animated fadeInLeft" data-wow-delay=".2s">
-                            <h1 class="section-title">Love to Hear From You</h1>
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-xl-8 offset-xl-2 py-5">
+
+                    <h1>Contact form Tutorial from <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>
+
+                    <form id="contact-form" name="contact" method="post" onsubmit="submitForm()" role="form">
+
+                        <div class="messages"></div>
+
+                        <div class="controls">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">Firstname *</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_lastname">Lastname *</label>
+                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_email">Email *</label>
+                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_need">Please specify your need *</label>
+                                        <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                                            <option value=""></option>
+                                            <option value="Request quotation">Request quotation</option>
+                                            <option value="Request order status">Request order status</option>
+                                            <option value="Request copy of an invoice">Request copy of an invoice</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_message">Message *</label>
+                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-success btn-send" value="Send message">
+                                    <h5 style="color:green" class="hidden" id="success">Your message has been recieved, we will reply as soon as possible</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-muted">
+                                        <strong>*</strong> These fields are required. Contact form template by
+                                        <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a>.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <!-- Section Titile -->
-                        <div class="col-md-6 mt-3 contact-widget-section2 wow animated fadeInLeft" data-wow-delay=".2s">
-                          <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content.</p>
-          
-                          <div class="find-widget">
-                           Company:  <a href="https://hostriver.ro">HostRiver</a>
-                          </div>
-                          <div class="find-widget">
-                           Address: <a href="#">4435 Berkshire Circle Knoxville</a>
-                          </div>
-                          <div class="find-widget">
-                            Phone:  <a href="#">+ 879-890-9767</a>
-                          </div>
-                          
-                          <div class="find-widget">
-                            Website:  <a href="https://uny.ro">www.uny.ro</a>
-                          </div>
-                          <div class="find-widget">
-                             Program: <a href="#">Mon to Sat: 09:30 AM - 10.30 PM</a>
-                          </div>
-                        </div>
-                        <!-- contact form -->
-                        <div class="col-md-6 wow animated fadeInRight" data-wow-delay=".2s">
-                            <form class="shake" role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
-                                <!-- Name -->
-                                <div class="form-group label-floating">
-                                  <label class="control-label" for="name">Name</label>
-                                  <input class="form-control" id="name" type="text" name="name" required data-error="Please enter your name">
-                                  <div class="help-block with-errors"></div>
-                                </div>
-                                <!-- email -->
-                                <div class="form-group label-floating">
-                                  <label class="control-label" for="email">Email</label>
-                                  <input class="form-control" id="email" type="email" name="email" required data-error="Please enter your Email">
-                                  <div class="help-block with-errors"></div>
-                                </div>
-                                <!-- Subject -->
-                                <div class="form-group label-floating">
-                                  <label class="control-label">Subject</label>
-                                  <input class="form-control" id="msg_subject" type="text" name="subject" required data-error="Please enter your message subject">
-                                  <div class="help-block with-errors"></div>
-                                </div>
-                                <!-- Message -->
-                                <div class="form-group label-floating">
-                                    <label for="message" class="control-label">Message</label>
-                                    <textarea class="form-control" rows="3" id="message" name="message" required data-error="Write your message"></textarea>
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                                <!-- Form Submit -->
-                                <div class="form-submit mt-5">
-                                    <button class="btn btn-common" type="submit" id="form-submit"><i class="material-icons mdi mdi-message-outline"></i> Send Message</button>
-                                    <div id="msgSubmit" class="h3 text-center hidden"></div>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+
+                    </form>
+
                 </div>
-              </section>
+
+            </div>
+
+        </div>
 
               <div class="footer">
                     <p>Footer</p>
                   </div>
+
+
+
+
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                  <link rel="stylesheet" type="text/css" href="./css/index.css">
+              
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+                      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+                  </script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+                  </script>
+                  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+                  </script>
+                  <script src="./js/contact.js"></script>
 
 
 
