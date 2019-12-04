@@ -42,7 +42,6 @@ exports.createTables = function (conData, callback){
 		
 	let sql = "CREATE TABLE Contacts (id INT NOT NULL AUTO_INCREMENT, forename VARCHAR(32), surname VARCHAR(32), email VARCHAR(32), subject VARCHAR(2048), message TEXT, dateRecieved DATETIME, PRIMARY KEY (id));";
 
-	sql += "CREATE TABLE USERS (username VARCHAR(16) NOT NULL, password VARCHAR(16) NOT NULL, PRIMARY KEY (username)); "
 	con.query(sql, function (err, result) {
 		//console.log("finish query:" + result);
 		callback(err, result);
@@ -57,7 +56,12 @@ exports.addContact = function (conData, newContact, callback){
     //insert the new contact
 	connect(conData, function(err, conn){
 		
-		//when done check for any error
+		if(err)
+			console.log(err)
+		else
+			console.log(conn)
+
+			//when done check for any error
 		if (err) {
 			console.log("error in connecting to db:" + err)
 			callback(err);
@@ -67,6 +71,9 @@ exports.addContact = function (conData, newContact, callback){
 		//perform the query
 		conn.query('INSERT INTO Contacts SET ?', newContact, function (err, result) {
 			//return control to the calling module
+			if(err)
+				console.log(err)
+
 			callback(err, result);
 		});
 	});

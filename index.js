@@ -53,18 +53,18 @@ app.get('/createDB', function(req, res) {
 //this function is to handle a new contact request
 app.post('/handlecontact', function(req, res){
     
-    console.log(req.body);
-
     //validate the data
     //forename is required
     if(req.body.forename === undefined){
         res.status = 400;
         res.send({message:"forename is required"});
+        console.log("forename is undefined");
         return;
     }//forename must be at least 2 characters long
     else if(req.body.forename.length < 2){
         res.status = 400;
         res.send({message:"forename is too short"});
+        console.log("forename is short");
         return;
     }
 
@@ -72,6 +72,7 @@ app.post('/handlecontact', function(req, res){
     if(req.body.surname === undefined){
         res.status = 400;
         res.send({message:"surname is required"});
+        console.log("surname is undefined");
         return;
     }
 
@@ -79,11 +80,13 @@ app.post('/handlecontact', function(req, res){
     if(req.body.email === undefined){
         res.status = 400;
         res.send({message:"email is required"});
+        console.log("email is undefined");
         return;
     }//email should be at least 5 characters long
     else if(req.body.email.length < 5 ){
         res.status = 400;
         res.send({message:"email is too short"});
+        console.log("email is short");
         return;
     }
     else {
@@ -92,6 +95,7 @@ app.post('/handlecontact', function(req, res){
         if(!re.test(String(req.body.email).toLowerCase())){
             res.status = 400;
             res.send({message:"invalid email format"});
+            console.log("email is wrong");
             return;
         }
     }
@@ -99,6 +103,7 @@ app.post('/handlecontact', function(req, res){
     //data validation is correct 
     //connect to database and save the data
 
+    console.log("now adding to db")
     //we need to created an object with fields that matches database fields
     //otherwise we get errors
     const newContact =  {
@@ -113,6 +118,9 @@ app.post('/handlecontact', function(req, res){
     //call the addConact function
     db.addContact(databaseData, newContact, function (err, data){
         
+        if(err)
+			console.log(err)
+
         //our response will be a json data
         res.setHeader('content-type', 'application/json')
         res.setHeader('accepts', 'GET, POST')
