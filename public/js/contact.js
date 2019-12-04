@@ -1,4 +1,4 @@
-function submitForm() {
+function submitForm(event) {
     event.preventDefault();
 
     var contact = document.getElementById('contact-form');
