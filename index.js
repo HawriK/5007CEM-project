@@ -64,7 +64,6 @@ app.post('/handlecontact', function(req, res){
     else if(req.body.forename.length < 2){
         res.status = 400;
         res.send({message:"forename is too short"});
-        console.log("forename is short");
         return;
     }
 
@@ -72,7 +71,6 @@ app.post('/handlecontact', function(req, res){
     if(req.body.surname === undefined){
         res.status = 400;
         res.send({message:"surname is required"});
-        console.log("surname is undefined");
         return;
     }
 
@@ -80,13 +78,11 @@ app.post('/handlecontact', function(req, res){
     if(req.body.email === undefined){
         res.status = 400;
         res.send({message:"email is required"});
-        console.log("email is undefined");
         return;
     }//email should be at least 5 characters long
     else if(req.body.email.length < 5 ){
         res.status = 400;
         res.send({message:"email is too short"});
-        console.log("email is short");
         return;
     }
     else {
@@ -95,7 +91,6 @@ app.post('/handlecontact', function(req, res){
         if(!re.test(String(req.body.email).toLowerCase())){
             res.status = 400;
             res.send({message:"invalid email format"});
-            console.log("email is wrong");
             return;
         }
     }
