@@ -1,7 +1,9 @@
 //import express module
 var express = require('express');
 var parser = require('body-parser');
-
+var session = require('express-session');
+var cookieParser = require('cookie-parser');
+var ejs = require('ejs');
 const db = require('./database');
 
 //create an express app
@@ -22,13 +24,27 @@ const databaseData = {
 
 //add a callback function to handle 
 //get request on the root
-app.get('/', function(req, res) {  
-    res.sendFile(path.join(__dirname+'/html/index.html'));
+app.get('/', function(req, res) {
+    let data = {
+        title: "emperor_games",
+    }
+    ejs.renderFile('./html/index.ejs', data, null, function(err, str){
+        // str => Rendered HTML string
+        res.send(str);
     });
+});
+
     
-    app.get('/about', function(req, res) {  
-    res.sendFile(path.join(__dirname+'/html/about.html'));
+app.get('/about', function(req, res) {
+    let data = {
+        title: "emperor_games",
+    }
+    ejs.renderFile('./html/about.ejs', data, null, function(err, str){
+        // str => Rendered HTML string
+        res.send(str);
     });
+});
+
     
     app.get('/contact', function(req, res) {  
     res.sendFile(path.join(__dirname+'/html/contact.html'));

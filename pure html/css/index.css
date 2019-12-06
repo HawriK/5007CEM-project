@@ -1,0 +1,81 @@
+
+
+.header {
+    background-color: rgb(34, 34, 34) !important;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image: url(https://i.pinimg.com/originals/2a/7f/51/2a7f5144f482d0cea469794416d63ab3.jpg);
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    height: 1261px;
+    background-color:rgb(44, 44, 44);
+}
+
+body .navbar {
+    padding-right: 10px;
+    
+}
+
+body a {
+    color: rgb(126, 56, 126) !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 120%;
+
+}
+
+body button {
+    background-color:  rgb(126, 56, 126) !important;
+}
+
+.carousel {
+    padding-top: 0px;
+}
+
+.box1 {
+    background-color: rgb(126, 56, 126);
+  }
+
+.bg-1{
+    background-color: rgb(44, 44, 44);
+    padding-top: 12px;
+}
+
+.card {
+    background-color: rgb(44, 44, 44);
+}
+
+.footer {
+    padding-bottom: 50px;
+    padding-top: 1px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+  }
+
+  body h5{
+      color: blanchedalmond !important;
+  }
+
+  .card-text{
+      color: blanchedalmond;
+      
+  }
+
+  .footer-space {
+    padding-bottom: 2px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(126, 56, 126);
+    color: white;
+    text-align: center;
+  }
+  
+  
