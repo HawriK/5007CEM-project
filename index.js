@@ -15,10 +15,10 @@ app.use(express.static('public'));
 
 //perpare our database connection parameters
 const databaseData = {
-    host:"localhost",
-    user:"root",
-    password:"",
-    database: "emperor_games",
+    host:"sql2.freemysqlhosting.net",
+    user:"sql2314765",
+    password:"vL1*aX2*",
+    database: "sql2314765",
     port: 3306
 };
 
