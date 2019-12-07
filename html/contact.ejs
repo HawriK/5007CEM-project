@@ -1,52 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Bootstrap 4 Example</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="./css/contact.css">
-
-</head>
+<%- include('head'); %>   
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand-sm bg-secondary justify-content-between header">
-            <a class="navbar-brand" href="#">
-                <img src="./Image/samuraigirl.giff.gif" width="140" height="80" alt="">
-            </a>
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Products</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">News</a>
-                </li>
-                <form class="form-inline" action="/action_page.php ">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-success" type="submit">Search</button>
-                </form>
-            </ul>
-        </nav>  
-    </div>
+        <header>
+                <%- include('navbar'); %>  
 
         <br>
         <br>
+        <div class="testthree">
         <div class="container">
 
             <div class="row">
 
                 <div class="col-xl-8 offset-xl-2 py-5">
 
-                    <h1>Contact form Tutorial from <a href="http://bootstrapious.com">Bootstrapious.com</a></h1>
+                    <h1>Contact from </h1>
 
                     <form id="contact-form" name="contact" method="post" onsubmit="submitForm(event)" role="form">
 
@@ -109,7 +75,7 @@
                                 <div class="col-md-12">
                                     <p class="text-muted">
                                         <strong>*</strong> These fields are required. Contact form template by
-                                        <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank">Bootstrapious</a>.</p>
+                                        <a href="https://bootstrapious.com/p/how-to-build-a-working-bootstrap-contact-form" target="_blank"></a>.</p>
                                 </div>
                             </div>
                         </div>
@@ -121,10 +87,8 @@
             </div>
 
         </div>
+        </header>
 
-              <div class="footer">
-                    <p>Footer</p>
-                  </div>
 
 
 
@@ -148,4 +112,33 @@
 
 
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+<%- include('footer'); %>   
 </html>

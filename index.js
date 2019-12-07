@@ -45,10 +45,36 @@ app.get('/about', function(req, res) {
     });
 });
 
-    
-    app.get('/contact', function(req, res) {  
-    res.sendFile(path.join(__dirname+'/html/contact.html'));
+app.get('/products', function(req, res) {
+    let data = {
+        title: "emperor_games",
+    }
+    ejs.renderFile('./html/products.ejs', data, null, function(err, str){
+        // str => Rendered HTML string
+        res.send(str);
     });
+});
+
+    
+app.get('/contact', function(req, res) {
+    let data = {
+        title: "emperor_games",
+    }
+    ejs.renderFile('./html/contact.ejs', data, null, function(err, str){
+        // str => Rendered HTML string
+        res.send(str);
+    });
+});
+
+app.get('/team', function(req, res) {
+    let data = {
+        title: "emperor_games",
+    }
+    ejs.renderFile('./html/team.ejs', data, null, function(err, str){
+        // str => Rendered HTML string
+        res.send(str);
+    });
+});
 
 
 app.get('/createDB', function(req, res) {  

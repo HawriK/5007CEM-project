@@ -1,8 +1,6 @@
 body {
-    background: #e8cbc0;
-    background: -webkit-linear-gradient(to right, #e8cbc0, #636fa4);
-    background: linear-gradient(to right, #e8cbc0, #636fa4);
-    min-height: 100vh;
+    background-image: url(https://i.pinimg.com/originals/2a/7f/51/2a7f5144f482d0cea469794416d63ab3.jpg);
+    height: 90%;
 }
 
 .social-link {
@@ -23,3 +21,19 @@ body {
     text-decoration: none;
     color: #555;
 }
+ 
+.testone .container{
+    background-color: rgb(36, 36, 36);
+}
+
+.footer {
+    padding-bottom: 50px;
+    padding-top: 1px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    text-align: center;
+    padding-top: 9.8%;
+  }
