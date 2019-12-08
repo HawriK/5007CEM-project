@@ -54,3 +54,13 @@ h1{
       text-align: center;
       color: blanchedalmond;
   }
+
+
+  .imageContainer {
+    width:1950px; 
+    height:200px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url(https://img.rankedboost.com/wp-content/uploads/2014/10/gold-profile-banner-trim.png);
+}
