@@ -14,14 +14,12 @@
               }
               
               /* Float four columns side by side */
-              .column {
-                float: center;
-                width: 100%;
-                padding: 10px;
-              }
+
               
               /* Remove extra left and right margins, due to padding */
-              .row {margin: 0 -5px;}
+              .row {
+                padding-top: 1%;
+              }
               
               /* Clear floats after the columns */
               .row:after {
@@ -37,14 +35,15 @@
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                 padding: 30px;
                 text-align: center;
-                background-color: #5f0077;
+                background-color: #2e2e2e;
+                max-width: 700px;
               }
               </style>
               </head>
               <body>
-              <div class="row">
+                  <div class="container">
+                      <div class="row">
                 <div class="center">  
-                <div class="column">
                   <div class="card">
                         <h5><%= forename %></h5>
                         <h5><%= surname %></h5>
