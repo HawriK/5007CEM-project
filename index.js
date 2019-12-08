@@ -51,6 +51,7 @@ app.get('/about', function(req, res) {
     });
 });
 
+
 app.get('/products', function(req, res) {
     let data = {
         title: "emperor_games",
@@ -61,7 +62,16 @@ app.get('/products', function(req, res) {
     });
 });
 
-    
+app.get('/adminpanel', function(req, res) {
+    let data = {
+        title: "emperor_games",
+    }
+    ejs.renderFile('./html/adminpanel.ejs', data, null, function(err, str){
+        // str => Rendered HTML string
+        res.send(str);
+    });
+});    
+
 app.get('/contact', function(req, res) {
     let data = {
         title: "emperor_games",
@@ -82,10 +92,30 @@ app.get('/team', function(req, res) {
     });
 });
 
+CONTS = db.getContacts(databaseData, function(err, data){
+    contactdata = data;
+    return contactdata;
+})
+
+app.get('/displaycontacts', function(req, res) {
+    db.getContacts(databaseData, function(err, data){
+        contactdata = data;
+        return contactdata;
+    })
+
+    let data = {
+        contacts: contactdata
+    }
+    ejs.renderFile('./html/displaycontacts.ejs', data, null, function(err, str){
+        // str => Rendered HTML string
+        res.send(str);
+    });
+});
+
 app.get('/protected', function (req, res){
 
     if(req.session.user){
-        res.sendFile(path.join(__dirname+'/html/protected.html'))
+        res.redirect("/adminpanel")
     }
     else{
         res.redirect('/login')
@@ -134,6 +164,7 @@ app.get('/logout', function (req,res){
     res.send("you logged out successfully");
 
 })
+
 
 
 app.get('/createDB', function(req, res) {  

@@ -91,3 +91,21 @@ exports.login = function (connData, loginData, callback){
 	})
 
 }
+
+exports.getContacts = function (connData, callback){
+    connect (connData, function (err, conn) {
+
+        //when done check for any error
+        if (err) {
+            console.log("error in connecting to db:" + err)
+            callback(err);
+            return;
+        }
+
+        conn.query('SELECT * FROM Contacts', function (err, result) {
+
+            return callback(err, result);
+        });
+
+    });
+}

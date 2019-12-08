@@ -1,0 +1,61 @@
+
+
+              <!DOCTYPE html>
+              <html>
+              <head>
+              <meta name="viewport" content="width=device-width, initial-scale=1">
+              <style>
+              * {
+                box-sizing: border-box;
+              }
+              
+              body {
+                font-family: Arial, Helvetica, sans-serif;
+              }
+              
+              /* Float four columns side by side */
+              .column {
+                float: center;
+                width: 100%;
+                padding: 10px;
+              }
+              
+              /* Remove extra left and right margins, due to padding */
+              .row {margin: 0 -5px;}
+              
+              /* Clear floats after the columns */
+              .row:after {
+                content: "";
+                display: table;
+                clear: both;
+              }
+              
+
+              
+              /* Style the counter cards */
+              .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                padding: 30px;
+                text-align: center;
+                background-color: #5f0077;
+              }
+              </style>
+              </head>
+              <body>
+              <div class="row">
+                <div class="center">  
+                <div class="column">
+                  <div class="card">
+                        <h5><%= forename %></h5>
+                        <h5><%= surname %></h5>
+                        <h5><%= email %></h5>
+                        <h5><%= subject %></h5>
+                        <h5><%= message %></h5>
+                        <h5><%= id %></h5>
+                  </div>
+                </div>
+              
+              
+              </body>
+              </html>
+              
