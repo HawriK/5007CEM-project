@@ -52,6 +52,7 @@ app.get('/about', function(req, res) {
 });
 
 
+
 app.get('/products', function(req, res) {
     let data = {
         title: "emperor_games",
@@ -91,6 +92,27 @@ app.get('/team', function(req, res) {
         res.send(str);
     });
 });
+
+app.get('/productone', function(req, res) {
+    let data = {
+        title: "emperor_games",
+    }
+    ejs.renderFile('./html/productone.ejs', data, null, function(err, str){
+        // str => Rendered HTML string
+        res.send(str);
+    });
+});
+
+app.get('/producttwo', function(req, res) {
+    let data = {
+        title: "emperor_games",
+    }
+    ejs.renderFile('./html/producttwo.ejs', data, null, function(err, str){
+        // str => Rendered HTML string
+        res.send(str);
+    });
+});
+
 
 CONTS = db.getContacts(databaseData, function(err, data){
     contactdata = data;
